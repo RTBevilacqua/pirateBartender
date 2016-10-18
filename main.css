@@ -1,0 +1,50 @@
+html{
+	box-sizing: border-box;
+	font-family: Arimo;
+}
+.image{
+	display: inline-block;
+	width: 600px;
+    height: 500px;
+    margin: auto 0 0 17px;
+}
+
+.form{
+    text-align: center;
+    background: white;
+    padding: 40.1px 21px;
+    width: 422px;
+    position: relative;
+    display: inline-block;
+    bottom: 58px;
+    left: 160px;
+}
+#order{
+	background: #E8BD2E;
+    width: 200px;
+    height: 45px;
+    border: none;
+    border-radius: 2%;
+    margin-top: 24px;
+    font-size: 1em;
+
+}
+#order:hover{
+	cursor: pointer; 
+}
+label{
+	font-size: 1.2em;
+
+}
+
+body{
+	background: lightblue;
+	margin: 56px auto;
+
+}
+
+p{
+	display: inline-block;
+}
+
+
