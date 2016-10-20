@@ -1,6 +1,6 @@
 $(document).ready(function(){
 var answers = [];
-
+//lists ingredients for drinks.
 var Ingredient = function(){
 	this.strong = ['Glug of rum', 'slug of whisky', 'splash of gin'];
 	this.salty= ['Olive on a stick', 'salt-dusted rim', 'rasher of bacon'];
