@@ -1,8 +1,6 @@
 $(document).ready(function(){
 var answers = [];
-var Question = function(){
-	
-}
+
 var Ingredient = function(){
 	this.strong = ['Glug of rum', 'slug of whisky', 'splash of gin'];
 	this.salty= ['Olive on a stick', 'salt-dusted rim', 'rasher of bacon'];
@@ -12,12 +10,8 @@ var Ingredient = function(){
 }
 //creates a random number between 1 - 3
 var number = function(){
-	return Math.floor((Math.random() * 2) + 1);
-	
+	return Math.floor((Math.random() * 2) + 1);	
 }
-// var Pantry = function(pantry){
-// 	this.pantry = pantry;
-// }
 
 //submit button pushed
 $('#order').click(function(e){
@@ -41,19 +35,16 @@ if($("input[name=fruity]:checked").val() == 1){
 	answers.push(ingredient.fruity[number()]);
 }
 
-console.log(answers);
-
 
 // combines a word from each ingredient to create the drink name
-var drinkName = answers.toString();
-console.log(drinkName);
+var drinkName = answers.join(' ');
 var name = drinkName.split(" ");
-console.log(name);
+var drinkNameFirst = name[name.length - 1].charAt(0).toUpperCase() + name[name.length - 1].slice(1);
+var drinkNameLast = name[0].charAt(0).toUpperCase() + name[0].slice(1);
 
 //provide the drink name to user.
-//console.log(name[4].toUpperCase() + " " + name[0].toUpperCase());
 $('form').hide();
-$('.form').append("<h2>One " + name[4].toUpperCase() + " " + name[0].toUpperCase() + " coming up!</h2>" )
+$('.form').append("<h2>One " + drinkNameFirst + " " + drinkNameLast + " coming up!</h2>" );
 $('.form').css({'height':'430px', 'bottom':'428px'});
 });
 
